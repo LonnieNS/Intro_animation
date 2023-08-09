@@ -1,0 +1,157 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+    font-family: 'Press Start 2P', cursive;
+    color:#fff;
+    position:absolute;
+    opacity:100;
+    top:40vh;
+    left:30vw;
+    font-size:5rem;
+    animation: starties 23s, fade 1s;
+    animation-delay:0s, 23s;
+}
+
+@keyframes starties{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:0;
+    }
+
+}
+
+@keyframes fade{
+    0%{
+        opacity:0;
+    }
+    100%{
+        opacity:100;
+    }
+}
+
+.backg {
+  height: 100vh;
+  width:100vw;
+  background-image: url(media/animbg.gif);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  overflow:hidden;
+}
+
+.dino {
+  height: 134px;
+  width: 133.3px;
+  background-image: url(media/Dino.png);
+  position: relative;
+  top: 82.5vh;
+  left: -10vw;
+  animation: rawr 1s steps(6) infinite, stompies 11s linear;
+}
+
+@keyframes rawr {
+  0% {
+    background-position: 0px;
+  }
+
+  100% {
+    background-position: -800px;
+  }
+}
+
+@keyframes stompies {
+  0% {
+    transform: translateX(-10vw);
+  }
+
+  100% {
+    transform: translateX(110vw);
+  }
+}
+
+.dinoflip {
+  height: 134px;
+  width: 133.3px;
+  margin-top:-15.5vh;
+  background-image: url(media/Dinoflip.png);
+  animation: starts 12s, rawrflip 1s steps(6) infinite, stompiesflip 10s linear, ends 1000000s;
+  animation-delay:0s, 12s, 12s, 22s;
+}
+
+@keyframes rawrflip {
+  0% {
+    background-position: -800px;
+  }
+
+  100% {
+    background-position: 0px;
+  }
+}
+
+@keyframes stompiesflip {
+  0% {
+    transform: translateX(110vw);
+  }
+
+  100% {
+    transform: translateX(-10vw);
+  }
+}
+
+.fball {
+  height: 180px;
+  width: 175px;
+  background-image: url(media/fireball.png);
+  margin-top: 65vh;
+
+  animation: starts 14s, shoot 500ms steps(8) infinite, moves 8.5s linear, ends 1000000s;
+  animation-delay:0s,14s, 14s, 22.5s;
+}
+
+
+@keyframes starts{
+0%{
+    transform:translateX(110vw)
+}
+100%{
+    transform:translateX(110vw)
+}
+
+}
+
+@keyframes ends{
+0%{
+    transform:translateX(-10vw)
+}
+100%{
+    transform:translateX(-10vw)
+}
+
+}
+
+@keyframes shoot {
+  0% {
+    background-position: 0px;
+  }
+
+  100% {
+    background-position: -1414px;
+  }
+}
+
+@keyframes moves {
+  0% {
+    transform: translateX(110vw);
+  }
+
+  100% {
+    transform: translateX(-10vw);
+  }
+}
+
